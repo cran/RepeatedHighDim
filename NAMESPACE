@@ -1,0 +1,4 @@
+export(TestStatSimple)
+export(TestStatSP)
+export(RepeatedHighDim)
+export(summary.RHD)
