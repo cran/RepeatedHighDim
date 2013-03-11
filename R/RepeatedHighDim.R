@@ -3,8 +3,8 @@
 #' \tabular{ll}{
 #' Package: \tab RepeatedHighDim\cr
 #' Type: \tab Package\cr
-#' Version: \tab 1.0\cr
-#' Date: \tab 2010-08-17\cr
+#' Version: \tab 1.01\cr
+#' Date: \tab 2013-03-11\cr
 #' License: \tab GPL (>= 2)\cr
 #' LazyLoad: \tab yes\cr
 #' }
@@ -43,7 +43,11 @@ NA
 #'   \item{p}{p-value.}
 #' @export
 #' @author Klaus Jung \email{Klaus.Jung@@ams.med.uni-goettingen.de}
-#' @references Brunner, E. (2009) Repeated measures under non-sphericity. Proceedings of the 6th St. Petersburg Workshop on Simulation, 605-609.
+#' @references
+#' \itemize{
+#'	\item{Brunner, E (2009) Repeated measures under non-sphericity. Proceedings of the 6th St. Petersburg Workshop on Simulation, 605-609.}
+#'	\item{Jung K, Becker B, Brunner B and Beissbarth T (2011) Comparison of Global Tests for Functional Gene Sets in Two-Group Designs and Selection of Potentially Effect-causing Genes. Bioinformatics, 27: 1377-1383.}
+#' }
 #' @examples
 #' X1 = matrix(rnorm(1000, 0, 1), 10, 100)
 #' X2 = matrix(rnorm(1000, 0.1, 1), 10, 100)
@@ -89,7 +93,11 @@ TestStatSimple = function(Y, H) {
 #'   \item{p}{p-value.}
 #' @export
 #' @author Klaus Jung \email{Klaus.Jung@@ams.med.uni-goettingen.de}
-#' @references Brunner, E. (2009) Repeated measures under non-sphericity. Proceedings of the 6th St. Petersburg Workshop on Simulation, 605-609.
+#' @references
+#' \itemize{
+#'	\item{Brunner, E (2009) Repeated measures under non-sphericity. Proceedings of the 6th St. Petersburg Workshop on Simulation, 605-609.}
+#'	\item{Jung K, Becker B, Brunner B and Beissbarth T (2011) Comparison of Global Tests for Functional Gene Sets in Two-Group Designs and Selection of Potentially Effect-causing Genes. Bioinformatics, 27: 1377-1383.}
+#' }
 #' @examples
 #' X1 = matrix(rnorm(1000, 0, 1), 10, 100)
 #' X2 = matrix(rnorm(1000, 0.1, 1), 10, 100)
@@ -168,7 +176,11 @@ TestStatSP = function(Y1, Y2) {
 #' @return An object that contains the test results. Contents can be displayes by the summary function.
 #' @export
 #' @author Klaus Jung \email{Klaus.Jung@@ams.med.uni-goettingen.de}
-#' @references Brunner, E. (2009) Repeated measures under non-sphericity. Proceedings of the 6th St. Petersburg Workshop on Simulation, 605-609.
+#' @references
+#' \itemize{
+#'	\item{Brunner, E (2009) Repeated measures under non-sphericity. Proceedings of the 6th St. Petersburg Workshop on Simulation, 605-609.}
+#'	\item{Jung K, Becker B, Brunner B and Beissbarth T (2011) Comparison of Global Tests for Functional Gene Sets in Two-Group Designs and Selection of Potentially Effect-causing Genes. Bioinformatics, 27: 1377-1383.}
+#' }
 #' @examples
 #' X1 = matrix(rnorm(1000, 0, 1), 10, 100)
 #' X2 = matrix(rnorm(1000, 0.1, 1), 10, 100)
@@ -207,8 +219,13 @@ RepeatedHighDim = function(X1, X2, paired=TRUE) {
 #' @param ... additional arguments affecting the summary produced.
 #' @return No value
 #' @export
+#' @method summary RHD
 #' @author Klaus Jung \email{Klaus.Jung@@ams.med.uni-goettingen.de}
-#' @references Brunner, E. (2009) Repeated measures under non-sphericity. Proceedings of the 6th St. Petersburg Workshop on Simulation, 605-609.
+#' @references
+#' \itemize{
+#'	\item{Brunner, E (2009) Repeated measures under non-sphericity. Proceedings of the 6th St. Petersburg Workshop on Simulation, 605-609.}
+#'	\item{Jung K, Becker B, Brunner B and Beissbarth T (2011) Comparison of Global Tests for Functional Gene Sets in Two-Group Designs and Selection of Potentially Effect-causing Genes. Bioinformatics, 27: 1377-1383.}
+#' }
 #' @examples
 #' X1 = matrix(rnorm(1000, 0, 1), 10, 100)
 #' X2 = matrix(rnorm(1000, 0.1, 1), 10, 100)

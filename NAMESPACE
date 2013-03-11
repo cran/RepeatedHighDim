@@ -1,4 +1,4 @@
-export(TestStatSimple)
-export(TestStatSP)
+S3method(summary,RHD)
 export(RepeatedHighDim)
-export(summary.RHD)
+export(TestStatSP)
+export(TestStatSimple)
