@@ -6,23 +6,25 @@
 }
 \arguments{
   \item{X1}{Matrix of expression levels in first group.
-  Rows represent genes, columns represent samples.}
+  Rows represent features, columns represent samples.}
 
   \item{X2}{Matrix of expression levels in second group.
-  Rows represent genes, columns represent samples.}
+  Rows represent features, columns represent samples.}
 
   \item{paired}{FALSE if samples are unpaired, TRUE if
   samples are paired.}
 }
 \value{
   An object that contains the test results. Contents can be
-  displayes by the summary function.
+  displayed by the summary function.
 }
 \description{
-  Detects global group effect between the samples of two
-  groups (paired or unpaired).
+  Global test for a set of molecular features (e.g. genes,
+  proteins,...) between two experimental groups. Paired or
+  unpaired design is allowed.
 }
 \examples{
+### Global comparison of a set of 100 genes between two experimental groups.
 X1 = matrix(rnorm(1000, 0, 1), 10, 100)
 X2 = matrix(rnorm(1000, 0.1, 1), 10, 100)
 RHD = RepeatedHighDim(X1, X2, paired=FALSE)

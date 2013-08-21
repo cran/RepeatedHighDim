@@ -1,8 +1,9 @@
-f1e23c8625441b91820ce2aa83033519 *DESCRIPTION
-f6eed189ae159c0a894183dbddd6f631 *NAMESPACE
-f4fd5d633cb3857e4a9b1471c121f000 *R/RepeatedHighDim.R
-ccf2838d9e73c2dd9f44f2c54fc9be55 *man/RepeatedHighDim-package.Rd
-1ff365eeba624e259def237b4aa67a57 *man/RepeatedHighDim.Rd
-367917f2d69af99845dd87e96e08a07e *man/TestStatSP.Rd
-3347fa013975c576276a6a4a7bd66451 *man/TestStatSimple.Rd
-3223e1a674253f2eb8e9a1d51d14264c *man/summary.RHD.Rd
+86fc7f1e6b393d7b215888168352880f *DESCRIPTION
+f394981bfc058c54dfbed25eaca17ae0 *NAMESPACE
+03161c40f25fce92bf18eda6011d870b *R/RepeatedHighDim.R
+3050fd97546c03f8d5a1e8eda393d99b *man/GlobTestMissing.Rd
+4f3ab4858348e601e51b40461c279948 *man/RepeatedHighDim-package.Rd
+ad23f2741231518da9ce9923087841cb *man/RepeatedHighDim.Rd
+01009f092b5cc2ab174db8a520e7487d *man/TestStatSP.Rd
+26a58256d7cbf93206a792959777a269 *man/TestStatSimple.Rd
+5c88e4051507173e9654cb4a7b26966a *man/summary.RHD.Rd

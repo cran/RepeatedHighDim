@@ -1,4 +1,5 @@
 S3method(summary,RHD)
+export(GlobTestMissing)
 export(RepeatedHighDim)
 export(TestStatSP)
 export(TestStatSimple)
