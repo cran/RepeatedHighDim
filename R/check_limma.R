@@ -7,6 +7,8 @@
 #' @importFrom utils install.packages menu
 #' @export
 #' @keywords internal
+#' @seealso
+#'For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
 check_limma <- function() # Returns TRUE if available, FALSE otherwise
 {
   if(requireNamespace("limma", quietly=TRUE)) return(TRUE)

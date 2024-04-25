@@ -39,6 +39,9 @@ D must have at least three columns. If D has three columns,
 automatically a 3-dimensional grid is generated. If D has more
 than three columns, k must be specified.
 }
+\seealso{
+For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
+}
 \author{
 Jochen Kruppa, Klaus Jung
 }

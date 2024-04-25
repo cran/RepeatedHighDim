@@ -41,14 +41,19 @@ A diagnostic plot that compares the entries of two correlation
 matrices using a color scale.
 }
 \examples{
+\dontrun{
 R1 = diag(10)
 X0 <- start_matrix(p=c(0.4, 0.2, 0.5, 0.15, 0.4, 0.35, 0.2, 0.25, 0.3, 0.4), k = 5000)
 Xt <- iter_matrix(X0, R = diag(10), T = 10000, e.min = 0.00001)
 GA_diagplot(R1, Rt = Xt$Rt, col.method = "trafficlight")
 GA_diagplot(R1, Rt = Xt$Rt, col.method = "updown")
 }
+}
 \references{
 Kruppa, J., Lepenies, B., & Jung, K. (2018). A genetic algorithm for simulating correlated binary data from biomedical research. \emph{Computers in biology and medicine}, \strong{92}, 1-8. \doi{10.1016/j.compbiomed.2017.10.023}
+}
+\seealso{
+For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
 }
 \author{
 Jochen Kruppa, Klaus Jung

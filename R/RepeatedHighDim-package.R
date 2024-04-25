@@ -54,6 +54,12 @@
 #'   \item \code{\link{loop}}: Calculates the fence and the loop.
 #' }
 #'
+#'
+#' \strong{N}:
+#' \itemize{
+#'   \item \code{\link{netRNA}}: network meta-analysis using gene expression data.
+#' }
+#'
 #' \strong{R}:
 #' \itemize{
 #'   \item \code{\link{RHighDim}}: Detects global group effects.
@@ -76,8 +82,6 @@
 #' }
 #'
 #'
-#' @keywords bag gem outlier
-#' @docType package
 #' @name RepeatedHighDim
 #' @aliases RepeatedHighDim-package
 #'
@@ -104,5 +108,5 @@
 #' If you have any questions, suggestions, or issues, please feel free to contact the maintainer, Klaus Jung (\email{klaus.jung@tiho-hannover.de}).
 #'
 #'
-NULL
+"_PACKAGE"
 

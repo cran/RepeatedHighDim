@@ -24,84 +24,87 @@
 #' @export
 #' @examples
 #' ## Attention: calculation is currently time-consuming.
-#' ## Remove #-Symbols to run examples
+#' \dontrun{
 #'
-#' ## Two 3-dimensional example data sets D1 and D2
-#'# n <- 200
-#'# x1 <- rnorm(n, 0, 1)
-#'# y1 <- rnorm(n, 0, 1)
-#'# z1 <- rnorm(n, 0, 1)
-#'# D1 <- data.frame(cbind(x1, y1, z1))
-#'# x2 <- rnorm(n, 1, 1)
-#'# y2 <- rnorm(n, 1, 1)
-#'# z2 <- rnorm(n, 1, 1)
-#'# D2 <- data.frame(cbind(x2, y2, z2))
-#'# colnames(D1) <- c("x", "y", "z")
-#'# colnames(D2) <- c("x", "y", "z")
+#' # Two 3-dimensional example data sets D1 and D2
+#' n <- 200
+#' x1 <- rnorm(n, 0, 1)
+#' y1 <- rnorm(n, 0, 1)
+#' z1 <- rnorm(n, 0, 1)
+#' D1 <- data.frame(cbind(x1, y1, z1))
+#' x2 <- rnorm(n, 1, 1)
+#' y2 <- rnorm(n, 1, 1)
+#' z2 <- rnorm(n, 1, 1)
+#' D2 <- data.frame(cbind(x2, y2, z2))
+#' colnames(D1) <- c("x", "y", "z")
+#' colnames(D2) <- c("x", "y", "z")
 #'
-#' ## Placing outliers in D1 and D2
-#'# D1[17,] = c(4, 5, 6)
-#'# D2[99,] = -c(3, 4, 5)
+#' # Placing outliers in D1 and D2
+#' D1[17,] = c(4, 5, 6)
+#' D2[99,] = -c(3, 4, 5)
 #'
-#' ## Grid size and graphic parameters
-#'# grid.size <- 20
-#'# red <- rgb(200, 100, 100, alpha = 100, maxColorValue = 255)
-#'# blue <- rgb(100, 100, 200, alpha = 100, maxColorValue = 255)
-#'# yel <- rgb(255, 255, 102, alpha = 100, maxColorValue = 255)
-#'# white <- rgb(255, 255, 255, alpha = 100, maxColorValue = 255)
-#'# require(rgl)
-#'# material3d(color=c(red, blue, yel, white),
-#'# alpha=c(0.5, 0.5, 0.5, 0.5), smooth=FALSE, specular="black")
+#' # Grid size and graphic parameters
+#' grid.size <- 20
+#' red <- rgb(200, 100, 100, alpha = 100, maxColorValue = 255)
+#' blue <- rgb(100, 100, 200, alpha = 100, maxColorValue = 255)
+#' yel <- rgb(255, 255, 102, alpha = 100, maxColorValue = 255)
+#' white <- rgb(255, 255, 255, alpha = 100, maxColorValue = 255)
+#' require(rgl)
+#' material3d(color=c(red, blue, yel, white),
+#' alpha=c(0.5, 0.5, 0.5, 0.5), smooth=FALSE, specular="black")
 #'
-#' ## Calucation and visualization of gemplot for D1
-#'# G <- gridfun(D1, grid.size=20)
-#'# G$H <- hldepth(D1, G, verbose=TRUE)
-#'# dm <- depmed(G)
-#'# B <- bag(D1, G)
-#'# L <- loop(D1, B, dm=dm)
-#'# bg3d(color = "gray39" )
-#'# points3d(D1[L$outliers==0,1], D1[L$outliers==0,2], D1[L$outliers==0,3], col="green")
-#'# text3d(D1[L$outliers==1,1], D1[L$outliers==1,2], D1[L$outliers==1,3],
-#'# as.character(which(L$outliers==1)), col=yel)
-#'# spheres3d(dm[1], dm[2], dm[3], col=yel, radius=0.1)
-#'# material3d(1,alpha=0.4)
-#'# gem(B$coords, B$hull, red)
-#'# gem(L$coords.loop, L$hull.loop, red)
-#'# axes3d(col="white")
+#' # Calucation and visualization of gemplot for D1
+#' G <- gridfun(D1, grid.size=20)
+#' G$H <- hldepth(D1, G, verbose=TRUE)
+#' dm <- depmed(G)
+#' B <- bag(D1, G)
+#' L <- loop(D1, B, dm=dm)
+#' bg3d(color = "gray39" )
+#' points3d(D1[L$outliers==0,1], D1[L$outliers==0,2], D1[L$outliers==0,3], col="green")
+#' text3d(D1[L$outliers==1,1], D1[L$outliers==1,2], D1[L$outliers==1,3],
+#' as.character(which(L$outliers==1)), col=yel)
+#' spheres3d(dm[1], dm[2], dm[3], col=yel, radius=0.1)
+#' material3d(1,alpha=0.4)
+#' gem(B$coords, B$hull, red)
+#' gem(L$coords.loop, L$hull.loop, red)
+#' axes3d(col="white")
 #'
-#' ## Calucation and visualization of gemplot for D2
-#'# G <- gridfun(D2, grid.size=20)
-#'# G$H <- hldepth(D2, G, verbose=TRUE)
-#'# dm <- depmed(G)
-#'# B <- bag(D2, G)
-#'# L <- loop(D2, B, dm=dm)
-#'# points3d(D2[L$outliers==0,1], D2[L$outliers==0,2], D2[L$outliers==0,3], col="green")
-#'# text3d(D2[L$outliers==1,1], D2[L$outliers==1,2], D2[L$outliers==1,3],
-#'# as.character(which(L$outliers==1)), col=yel)
-#'# spheres3d(dm[1], dm[2], dm[3], col=yel, radius=0.1)
-#'# gem(B$coords, B$hull, blue)
-#'# gem(L$coords.loop, L$hull.loop, blue)
+#' # Calucation and visualization of gemplot for D2
+#' G <- gridfun(D2, grid.size=20)
+#' G$H <- hldepth(D2, G, verbose=TRUE)
+#' dm <- depmed(G)
+#' B <- bag(D2, G)
+#' L <- loop(D2, B, dm=dm)
+#' points3d(D2[L$outliers==0,1], D2[L$outliers==0,2], D2[L$outliers==0,3], col="green")
+#' text3d(D2[L$outliers==1,1], D2[L$outliers==1,2], D2[L$outliers==1,3],
+#' as.character(which(L$outliers==1)), col=yel)
+#' spheres3d(dm[1], dm[2], dm[3], col=yel, radius=0.1)
+#' gem(B$coords, B$hull, blue)
+#' gem(L$coords.loop, L$hull.loop, blue)
 #'
-#' ## Example of outlier detection with four principal components.
-#' ## Attention: calculation is currently time-consuming.
+#' # Example of outlier detection with four principal components.
+#' # Attention: calculation is currently time-consuming.
 #'
-#'# set.seed(123)
-#'# n <- 200
-#'# x1 <- rnorm(n, 0, 1)
-#'# x2 <- rnorm(n, 0, 1)
-#'# x3 <- rnorm(n, 0, 1)
-#'# x4 <- rnorm(n, 0, 1)
-#'# D <- data.frame(cbind(x1, x2, x3, x4))
-#'# D[67,] = c(7, 0, 0, 0)
+#' set.seed(123)
+#' n <- 200
+#' x1 <- rnorm(n, 0, 1)
+#' x2 <- rnorm(n, 0, 1)
+#' x3 <- rnorm(n, 0, 1)
+#' x4 <- rnorm(n, 0, 1)
+#' D <- data.frame(cbind(x1, x2, x3, x4))
+#' D[67,] = c(7, 0, 0, 0)
 #'
-#'# date()
-#'# G = gridfun(D, 20, 4)
-#'# G$H = hldepth(D, G, verbose=TRUE)
-#'# dm = depmed(G)
-#'# B = bag(D, G)
-#'# L = loop(D, B, dm=dm)
-#'# which(L$outliers==1)
-#'# date()
+#' date()
+#' G = gridfun(D, 20, 4)
+#' G$H = hldepth(D, G, verbose=TRUE)
+#' dm = depmed(G)
+#' B = bag(D, G)
+#' L = loop(D, B, dm=dm)
+#' which(L$outliers==1)
+#' date()
+#' }
+#'@seealso
+#'For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
 gem <- function (coords, hull, clr)
 {
   for (i in 1:dim(hull)[1]) {

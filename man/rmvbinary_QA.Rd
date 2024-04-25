@@ -38,6 +38,9 @@ rmvbinary_QA(n = 10, R = diag(2), p = c(0.5, 0.6))
 \references{
 Qaqish, B. F. (2003) A family of multivariate binary distributions for simulating correlated binary variables with specified marginal means and correlations. \emph{Biometrika}, \strong{90(2)}, 455-463. \doi{10.1093/biomet/90.2.455}
 }
+\seealso{
+For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
+}
 \author{
 Jochen Kruppa, Klaus Jung
 }

@@ -17,20 +17,23 @@
 #' @export
 #' @examples
 #' ## Attention: calculation is currently time-consuming.
-#' ## Remove #-Symbols to run examples
+#' \dontrun{
 #'
-#' ## A 3-dimensional example data set D1
-#'# n <- 200
-#'# x1 <- rnorm(n, 0, 1)
-#'# y1 <- rnorm(n, 0, 1)
-#'# z1 <- rnorm(n, 0, 1)
-#'# D1 <- data.frame(cbind(x1, y1, z1))
-#'# colnames(D1) <- c("x", "y", "z")
+#' # A 3-dimensional example data set D1
+#' n <- 200
+#' x1 <- rnorm(n, 0, 1)
+#' y1 <- rnorm(n, 0, 1)
+#' z1 <- rnorm(n, 0, 1)
+#' D1 <- data.frame(cbind(x1, y1, z1))
+#' colnames(D1) <- c("x", "y", "z")
 #'
-#' ## Specification of the grid and calculation of the halfspace location depth at each grid location.
-#'# G <- gridfun(D1, grid.size=20)
-#'# G$H <- hldepth(D1, G, verbose=TRUE)
-#'# dm <- depmed(G) ## Calculation of the depth median
+#' # Specification of the grid and calculation of the halfspace location depth at each grid location.
+#' G <- gridfun(D1, grid.size=20)
+#' G$H <- hldepth(D1, G, verbose=TRUE)
+#' dm <- depmed(G) ## Calculation of the depth median
+#' }
+#'@seealso
+#'For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
 depmed = function (G)
 {
   if (length(G$grid.k)==0) {

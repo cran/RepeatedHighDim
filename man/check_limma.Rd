@@ -13,6 +13,9 @@ limma will be installed automatically.
 \details{
 Check for package dependency
 }
+\seealso{
+For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
+}
 \author{
 Sergej Ruff
 }

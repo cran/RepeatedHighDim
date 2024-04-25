@@ -18,6 +18,8 @@
 #' X2 = matrix(rnorm(1000, 0.1, 1), 10, 100)
 #' RHD = RHighDim(X1, X2, paired=FALSE)
 #' summary_RHD(RHD)
+#'@seealso
+#'For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
 RHighDim <- function(X1, X2, paired=TRUE) {
   d = dim(X1)[1]
   if (paired==TRUE) {

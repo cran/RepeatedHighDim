@@ -17,3 +17,6 @@ A list.
 \description{
 Calculates test statistic for RHighDim
 }
+\seealso{
+For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
+}

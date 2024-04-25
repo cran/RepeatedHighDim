@@ -40,6 +40,9 @@ rho_bounds(R, p)
 \references{
 Emrich, L.J., Piedmonte, M.R.: A method for generating highdimensional multivariate binary variates. \emph{The American Statistician}, \strong{45(4)}, 302 (1991). \doi{10.1080/00031305.1991.10475828}
 }
+\seealso{
+For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
+}
 \author{
 Jochen Kruppa, Klaus Jung
 }

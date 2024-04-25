@@ -53,6 +53,8 @@
 #' fc_plot(CI, xlim=c(-3, 0.5), ylim=-log10(c(1, 0.0001)), updown="down")
 #' fc_plot(CI, xlim=c(-3, 3), ylim=-log10(c(1, 0.0001)), updown="all")
 #' }
+#' @seealso
+#'For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
 fc_plot = function(CI, alpha=0.05, updown="all", xlim=c(-3, 3), ylim=-log10(c(1, 0.001))) {
   logFC = CI$logFC
   d = length(logFC)

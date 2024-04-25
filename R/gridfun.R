@@ -26,6 +26,8 @@
 #' }
 #' @author Jochen Kruppa, Klaus Jung
 #' @export
+#' @seealso
+#'For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
 gridfun <- function (D, grid.size, k=4)
 {
   if (dim(D)[2]<3) message("Error: number of dimensions must be greater or equal 3.")

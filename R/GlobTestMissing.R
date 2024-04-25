@@ -29,6 +29,8 @@
 #' X1[sample(1:(n1*d), tau * (n1*d))] = NA
 #' X2[sample(1:(n2*d), tau * (n2*d))] = NA
 #' GlobTestMissing(X1, X2, nperm=100)
+#' @seealso
+#'For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
 GlobTestMissing  <-  function(X1, X2, nperm=100) {
   d = dim(X1)[1]
   n1 = dim(X1)[2]

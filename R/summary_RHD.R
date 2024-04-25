@@ -18,6 +18,8 @@
 #' X2 = matrix(rnorm(1000, 0.1, 1), 10, 100)
 #' RHD = RHighDim (X1, X2, paired=FALSE)
 #' summary_RHD(RHD)
+#'@seealso
+#'For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
 summary_RHD <-  function(object, ...) {
   A = data.frame(effect=c("Group"), F=round(object$Fn, 4), df1=round(object$f, 4), df2=round(object$f2, 4), p=round(object$p, 4))
   cat("Number of Genes:", object$d, "\n")

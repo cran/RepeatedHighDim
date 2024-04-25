@@ -23,6 +23,8 @@
 #'
 #' ### Calculation of probabilities for binary sequences
 #' sequence_probs(Xt = Xt)
+#'@seealso
+#'For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
 sequence_probs <- function(Xt) {
   n = dim(Xt)[1]
   m = dim(Xt)[2]

@@ -36,6 +36,8 @@
 #'
 #' ### Drawing of a random sample S of size n = 10
 #' S <- Xt[sample(1:1000, 10, replace = TRUE),]
+#' @seealso
+#'For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
 iter_matrix <- function(X0, R, T=1000, e.min=.0001, plt=TRUE, perc=TRUE) {
   n = dim(X0)[1]
   m = dim(X0)[2]

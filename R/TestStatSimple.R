@@ -5,6 +5,8 @@
 #' @return A list.
 #' @importFrom  MASS ginv
 #' @importFrom stats pf
+#' @seealso
+#'For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
 TestStatSimple <- function(Y, H) {
 	d = dim(Y)[1]
 	n = dim(Y)[2]

@@ -20,6 +20,8 @@
 #'
 #' ## check if p can be restored
 #' apply(X0, 2, mean)
+#'@seealso
+#'For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
 start_matrix <- function(p, k) {
   m = length(p)
   X0 = matrix(NA, k, m)

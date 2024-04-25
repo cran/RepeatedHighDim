@@ -32,6 +32,9 @@ Brunner, E (2009) Repeated measures under non-sphericity. \emph{Proceedings of t
 
 Jung K, Becker B, Brunner B and Beissbarth T (2011) Comparison of Global Tests for Functional Gene Sets in Two-Group Designs and Selection of Potentially Effect-causing Genes. \emph{Bioinformatics}, \strong{27}, 1377-1383. \doi{10.1093/bioinformatics/btr152}
 }
+\seealso{
+For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
+}
 \author{
 Klaus Jung
 }

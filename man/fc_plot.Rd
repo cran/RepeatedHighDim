@@ -72,6 +72,9 @@ Dudoit, S., Shaffer, J. P., & Boldrick, J. C. (2003). Multiple hypothesis testin
 
 Jung, K., Friede, T., & Beißbarth, T. (2011). Reporting FDR analogous confidence intervals for the log fold change of differentially expressed genes. \emph{BMC bioinformatics}, \strong{12}, 1-9. \url{https://link.springer.com/article/10.1186/1471-2105-12-288}
 }
+\seealso{
+For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
+}
 \author{
 Klaus Jung
 }

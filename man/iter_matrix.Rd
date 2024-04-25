@@ -54,6 +54,9 @@ S <- Xt[sample(1:1000, 10, replace = TRUE),]
 \references{
 Kruppa, J., Lepenies, B., & Jung, K. (2018). A genetic algorithm for simulating correlated binary data from biomedical research. \emph{Computers in biology and medicine}, \strong{92}, 1-8. \doi{10.1016/j.compbiomed.2017.10.023}
 }
+\seealso{
+For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
+}
 \author{
 Jochen Kruppa, Klaus Jung
 }

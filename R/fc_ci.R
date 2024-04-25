@@ -51,6 +51,8 @@
 #' fc_plot(CI, xlim=c(-3, 0.5), ylim=-log10(c(1, 0.0001)), updown="down")
 #' fc_plot(CI, xlim=c(-3, 3), ylim=-log10(c(1, 0.0001)), updown="all")
 #' }
+#' @seealso
+#'For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
 fc_ci = function(fit, alpha=0.05, method="raw") {
   p.raw = fit$p.value[,2]
   p.bh = p.adjust(p.raw, method="BH")

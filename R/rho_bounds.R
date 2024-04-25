@@ -25,6 +25,8 @@
 #' p <- c(0.1, 0.2, 0.4, 0.5)
 #'
 #' rho_bounds(R, p)
+#'@seealso
+#'For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
 rho_bounds <- function(R, p) {
   n = dim(R)[1]
   m = dim(R)[2]

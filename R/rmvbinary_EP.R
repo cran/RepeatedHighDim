@@ -24,6 +24,8 @@
 #' @examples
 #' ## Generation of a random sample
 #' rmvbinary_EP(n = 10, R = diag(2), p = c(0.5, 0.6))
+#'@seealso
+#'For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
 rmvbinary_EP  <-  function(n, R, p){
   s0  <-  seq(-1, 1, 0.01)
   q  <-  1 - p

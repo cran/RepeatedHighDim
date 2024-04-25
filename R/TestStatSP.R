@@ -4,6 +4,8 @@
 #' @param Y1 A matrix.
 #' @param Y2 A matrix.
 #' @return A list.
+#' @seealso
+#'For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
 TestStatSP <- function(Y1, Y2) {
   d = dim(Y1)[1]
   n1 = dim(Y1)[2]

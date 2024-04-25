@@ -43,6 +43,9 @@ GlobTestMissing(X1, X2, nperm=100)
 \references{
 Jung K, Dihazi H, Bibi A, Dihazi GH and Beissbarth T (2014): Adaption of the Global Test Idea to Proteomics Data with Missing Values. \emph{Bioinformatics}, \strong{30}, 1424-30. \doi{10.1093/bioinformatics/btu062}
 }
+\seealso{
+For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
+}
 \author{
 Klaus Jung
 }

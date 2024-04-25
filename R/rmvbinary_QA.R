@@ -23,6 +23,8 @@
 #' @examples
 #' ## Generation of a random sample
 #' rmvbinary_QA(n = 10, R = diag(2), p = c(0.5, 0.6))
+#' @seealso
+#'For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
 rmvbinary_QA  <-  function(n, R, p) {
   d <- length(p)
   Y  <-  matrix(NA, n, d)
