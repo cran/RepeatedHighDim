@@ -32,7 +32,7 @@
 #' @examples
 #' ### Generation of the representive matrix Xt
 #' X0 <- start_matrix(p = c(0.5, 0.6), k = 1000)
-#' Xt <- iter_matrix(X0, R = diag(2), T = 10000, e.min = 0.00001)$Xt
+#' Xt <- iter_matrix(X0, R = diag(2),  T = 10000,e.min = 0.00001)$Xt
 #'
 #' ### Drawing of a random sample S of size n = 10
 #' S <- Xt[sample(1:1000, 10, replace = TRUE),]
@@ -46,8 +46,20 @@ iter_matrix <- function(X0, R, T=1000, e.min=.0001, plt=TRUE, perc=TRUE) {
   e0 = sqrt(sum((R - R0)^2) / (n * n))
   et = e0
   maxe = e0
+
+  # Custom progress bar initialization
+  progress_bar <- function(iter, total) {
+    bar_length <- 40
+    filled_length <- round(bar_length * iter / total)
+    bar <- paste(rep("=", filled_length), collapse="")
+    spaces <- paste(rep(" ", bar_length - filled_length), collapse="")
+    cat(sprintf("\rIteration: %d/%d [%s%s]", iter, total, bar, spaces))
+  }
+
+
   for (t in 1:T) { ### START ITERATION
-    if (t%%(T/10)==0 & perc==TRUE) print(paste(100 * t/T, "%"))
+    if (perc) progress_bar(t, T) # Update progress bar
+
     R0 = cor(X0)
     R0[which(is.na(R0))] = 0
     e0 = sqrt(sum((R - R0)^2) / (n * n))
@@ -77,10 +89,14 @@ iter_matrix <- function(X0, R, T=1000, e.min=.0001, plt=TRUE, perc=TRUE) {
     if (et[t]<e.min & plt==TRUE) {
       plot(1:(t+1), et, type="l", cex.lab=1.5, cex.axis=1.5, xlab="Number of translocations", ylab="RMSE", xlim=c(0, T), ylim=c(0, maxe), lwd=2)
       grid()
+      cat("\nEarly stopping: RMSE fell below the threshold at iteration", t, "\n")
       break
     }
     if (et[t]<e.min) break
   } ### END ITERATION
+
+  # Ensure the progress bar finishes gracefully
+  if (perc) cat("\n") # Move to a new line after completion
   RMSE = rep(NA, T)
   RMSE[1:t] = et[1:t]
   out = list(Xt=Xt, t=t, Rt=Rt, RMSE=RMSE)

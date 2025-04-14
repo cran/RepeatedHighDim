@@ -1,8 +1,6 @@
 #' @title netRNA:Network meta-analysis for gene expression data
 #'
-#' @description This function conducts network meta-analysis using gene expression data
-#' to make indirect comparisons between different groups. It computes the p values for
-#' each gene and the fold changes, and provides a dataframe  containing these results.
+#' @description This function conducts network meta-analysis using gene expression data to make indirect comparisons between different groups. It computes the p values for each gene and the fold changes, and provides a dataframe  containing these results.
 #'
 #' @param TE A list containing log fold changes from two individual studies.
 #' Index names of the list should be the gene names; otherwise,
@@ -19,8 +17,6 @@
 #' a control group and the two other nodes represent treatment (or diseased) groups.
 #' While the user provides fold changes and their standard errors of each treatment versus control as input,
 #' the function calculates the fold changes for the indirect comparison between the two treatments.
-#' It's crucial to note that the order of genes in the TE and seTE lists for both studies should be the same.
-#' Meaning if Gene "A" is the first gene in the first study, it should also be the first gene in the second study.
 #'
 #' @return A list containing the p values for each gene, the fold changes,
 #' the upper and lower bounds for the 95\% CI of the log fold changes, and a summary dataframe with results for each gene.
@@ -39,7 +35,8 @@
 #' @export
 #' @examples
 #'
-#'#######################
+#'\dontrun{
+#' #'#######################
 #'### Data generation ###
 #'#######################
 #'n = 100 ### Sample size per group
@@ -116,10 +113,10 @@
 #'TEs <- list(fc.S1, fc.S2)
 #'seTEs <- list(fce.S1, fce.S2)
 #'}
-#' \dontrun{
-#' # Example usage:
-#' test <- netRNA(TE = TEs, seTE = seTEs, treat1 = treat1, treat2 = treat2, studlab = studlab)
-#' }
+#'
+#'# Example usage:
+#'test <- netRNA(TE = TEs, seTE = seTEs, treat1 = treat1, treat2 = treat2, studlab = studlab)
+#'}
 #'@seealso
 #'For more information, please refer to the package's documentation and the tutorial: \url{https://software.klausjung-lab.de/}.
 netRNA <- function(TE, seTE, treat1, treat2, studlab) {

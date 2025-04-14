@@ -70,16 +70,14 @@
 #'
 #' \strong{S}:
 #' \itemize{
+#'   \item \code{\link{scTC_bpplot}}: Post-trim breakpoint heatmap for scTrimClust results.
+#'   \item \code{\link{scTC_trim_effect}}: Compare scTrimClust trimming  against default Seurat analysis.
+#'   \item \code{\link{scTrimClust}}: Clustering with alpha hull-based outlier detection.
 #'   \item \code{\link{sequence_probs}}: Calculates probabilities for binary sequences.
 #'   \item \code{\link{start_matrix}}: Sets up the start matrix.
 #'   \item \code{\link{summary_RHD}}: Provides a summary of the RHighDim function.
 #' }
 #'
-#' \strong{T}:
-#' \itemize{
-#'   \item \code{\link{TestStatSimple}}: Calculates the test statistic for RHighDim.
-#'   \item \code{\link{TestStatSP}}: Calculates the test statistic for RHighDim.
-#' }
 #'
 #'
 #' @name RepeatedHighDim
@@ -102,7 +100,7 @@
 #'
 #' \itemize{
 #'   \item Jochen Kruppa (\email{j.kruppa@hs-osnabrueck.de})
-#'   \item Sergej Ruff (\email{Sergej.Ruff@tiho-hannover.de})
+#'   \item Sergej Ruff (\email{Sergej.Ruff@tiho-hannover.de} ,second maintainer)
 #' }
 #'
 #' If you have any questions, suggestions, or issues, please feel free to contact the maintainer, Klaus Jung (\email{klaus.jung@tiho-hannover.de}).

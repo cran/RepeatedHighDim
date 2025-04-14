@@ -46,7 +46,7 @@ marginal probabilities do not change. If the correlation matrix is closer to R t
 \examples{
 ### Generation of the representive matrix Xt
 X0 <- start_matrix(p = c(0.5, 0.6), k = 1000)
-Xt <- iter_matrix(X0, R = diag(2), T = 10000, e.min = 0.00001)$Xt
+Xt <- iter_matrix(X0, R = diag(2),  T = 10000,e.min = 0.00001)$Xt
 
 ### Drawing of a random sample S of size n = 10
 S <- Xt[sample(1:1000, 10, replace = TRUE),]
