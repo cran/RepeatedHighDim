@@ -83,11 +83,14 @@ scTC_trim_effect <- function(
     heatmap_color_palette = colorRamp2(seq(0, 100, 1), heat.colors(101, rev = TRUE)),
     column_title = "", row_names_side = "right", legend_name = "No. of\nmarkers",row_names_gp = 10,
     column_title_gp = 12) {
+
+
   cells <- sort(unique(unlist(lapply(method_pairs, function(m) {
     unique(c(m$data1$cluster, m$data2$cluster))
   }))))
 
   ncells <- length(cells)
+
 
 
 
